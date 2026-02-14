@@ -5,7 +5,7 @@
   vars:
     sg_id: sg-08f36e4129a352630
     ami_id: ami-0220d79f3f480ecf5
-    environments: dev
+    env: dev
     instances:
       - mongodb
       - catalogue
@@ -17,12 +17,12 @@
         instance_type: t3.micro
         security_group: "{{ sg_id }}"
         image_id: "{{ ami_id }}"
-        name: "{{ item }}-{{ environments }}"
+        name: "{{ item }}-{{ env}}"
         tags:
           Project: roboshop
           Component: "{{ item }}"
-          Environment: "{{ environments }}"
-          Name: "{{ item }}-{{ environments }}"
+          Env: "{{ env }}"
+          Name: "{{ item }}-{{ env }}"
       loop: "{{ instances }}"
       register: ec2_output
 
