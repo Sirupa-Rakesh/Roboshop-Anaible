@@ -6,13 +6,13 @@
   vars:
     sg_id: sg-08f36e4129a352630
     ami_id: ami-0220d79f3f480ecf5
-    domain_name: daws88s.online
+    domain_name: rakeshdev.online
     env: dev
     action: create
     instances:
     - mongodb
     - catalogue
-    
+
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
