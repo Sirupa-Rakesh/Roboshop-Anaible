@@ -10,7 +10,7 @@
     instances:
       - mongodb
       - catalogue
-      
+
     tasks:
 
     - name: create ec2 instances
