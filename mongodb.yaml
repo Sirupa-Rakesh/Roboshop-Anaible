@@ -5,7 +5,7 @@
   tasks:
   - name: copy mongo repo
     ansible.builtin.copy:
-      src: /home/ec2-user/Roboshop-Anaible/mongo.repo
+      src: mongodb.repo
       dest: /etc/yum.repos.d/mongo.repo
 
   - name: install mongodb server
