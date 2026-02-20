@@ -37,11 +37,12 @@
       state: absent
       path: /etc/nginx/nginx.conf
 
+  
   - name: copy nginx.conf
     ansible.builtin.template:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
-      remote_src: yes
+
 
   - name: resatrt nginx
     ansible.builtin.service:
